@@ -66,15 +66,15 @@ public class N1exercici3 {
 	}
 
 	private static void leerFichero(HashMap<String, String> paisesYcapitales) {
-		int i = 0;
+		
 		try {
 			FileReader fr = new FileReader("src/countries.txt");
 			BufferedReader bf = new BufferedReader(fr);
 			String linea;
-			while ((linea = bf.readLine()) != null && i < 51) {
+			while ((linea = bf.readLine()) != null) {
 				String[] cadenas = linea.split(" ");
 				paisesYcapitales.put(cadenas[0], cadenas[1]);
-				i++;
+				
 			}
 			fr.close();
 
